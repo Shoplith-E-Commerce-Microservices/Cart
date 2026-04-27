@@ -21,6 +21,7 @@ public class CartServiceImpl implements CartService {
       if(cartRepository.findByUserId(payload.getUser_id()).isPresent()){
           throw new CartAlreadyExistException("Cart already exist belongs to this user id " + payload.getUser_id());
       }
+
         Cart newCart = new Cart();
         newCart.setUser_id(payload.getUser_id());
         newCart.setCartItems(null);
