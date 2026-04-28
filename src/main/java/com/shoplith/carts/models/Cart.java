@@ -1,6 +1,7 @@
 package com.shoplith.carts.models;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +27,7 @@ public class Cart {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
     @OneToMany(mappedBy = "cart",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<CartItems> cartItems = new ArrayList<>();
 
 
