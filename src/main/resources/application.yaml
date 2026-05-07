@@ -18,3 +18,27 @@ spring:
 
 server:
   port: 8003
+  servlet:
+   context-path: /cart-app/api
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:5001/eureka
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: Cart Service
+    description: Shoplith E-commerce Application (Cart Service)
+    version: 1.0.0
