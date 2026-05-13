@@ -42,3 +42,6 @@ info:
     name: Cart Service
     description: Shoplith E-commerce Application (Cart Service)
     version: 1.0.0
+
+jwt:
+  secret: dsamdnash32qw903u0riowqejoirj3290roijaskflnlksznfklnsanfasf

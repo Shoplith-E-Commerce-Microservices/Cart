@@ -20,7 +20,7 @@ public class CartController {
        this.cartService = cartService;
    }
 
-   @PostMapping("/cart")
+   @PostMapping("/cart/create")
     public ResponseEntity<ApiResponse<CartDto>> createCart(@RequestBody  CartPayload payload){
        return  ResponseEntity.status(201).body(new ApiResponse<>(201,"Cart has been created successfully", ApiResponse.Status.SUCCESS,cartService.createCart(payload)));
     }
